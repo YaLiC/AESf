@@ -1,0 +1,94 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+<head>
+	<title>AES fas!</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Закладка (ссылка с JavaScript) для вашего Интернет браузера. Поможет зашифровать и расшифровать выделенный текст с заменой. С помощью криптостойкого, симметричного алгоритма AES(Rijndael) 256 bit CBC.">
+	<meta name="keywords" content="закладка, шифрование, текст, браузер, bookmarklet, cipher, text, browser, aes, rijndael, base64, wtfpl">
+	<meta name="copyright" content="WTFPL: © 2015 Ilya Balduev <ilya@balduev.name>">
+	<meta name="author" content="ilya Balduev aka YaLiC">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://yalic.pw/aes/">
+	<meta name="twitter:title" content="Шифрование текста алгоритмом AES посредством закладки в браузере">
+	<meta name="twitter:description" content="Закладка (ссылка с JavaScript) для вашего Интернет браузера. Поможет зашифровать и расшифровать выделенный текст с заменой. С помощью криптостойкого, симметричного алгоритма AES(Rijndael) 256 bit CBC.">
+	<meta name="twitter:image" content="https://yalic.pw/aes/AES-icon.png">
+	<meta name="twitter:site" content="@balduev">
+        <meta name="twitter:creator" content="@balduev">
+	<meta property="og:title" content="Шифрование текста алгоритмом AES посредством закладки в браузере">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://yalic.pw/aes/">
+	<meta property="og:image" content="https://yalic.pw/aes/AES-icon.png">
+	<link href="http://microformats.org/profile/rel-license" rel="profile">
+	<link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
+	<link href="favicon.ico" type="image/x-icon" rel="icon">
+	<style type="text/css">
+		html {padding:20px 30px 20px 30px; background: #fbfbfb url("sativa.png");}
+		body {min-width:350px; padding:15px; border:1px solid #ccc; border-radius:3px; box-shadow:0 0 10px rgba(150,150,150,0.5); background-color:rgba(255,255,255,0.6); color:#333; font-size:13pt; text-align:justify; font-family: "Ubuntu", "trebuchet MS", "sans-serif";}
+		a {color:#111;} a:visited {color:#111;} a:active {color:#111;} a:hover {text-decoration:none;}
+		#howtouse {display:none; margin:auto; position:absolute; top:0; left:0; bottom:0; right:0; width:622px; height:493px; background-color:#fafafa; border:1px solid #aaa; box-shadow: 0 0 15px rgba(0,0,0,0.3);}
+	</style>
+</head>
+<body>
+	<figure style="float:right; margin:10px 10px 10px 100px; width:256px;">
+		<a href='javascript:(function(){if(typeof window.AESf==="undefined"){var aJS=document.createElement("script");aJS.type="text/javascript";aJS.src="https://goo.gl/JuQ6cj";document.getElementsByTagName("head")[0].appendChild(aJS)}else AESf()})();' title="AESf!">
+			<img src="AES-icon.png" style="width:256px; opacity:0.9;" alt="AESf!" /></a>
+		<figcaption style="padding-bottom:5px; border-bottom:3px solid #f33;">
+			<span style="font-size:18pt;">Перетащи этот щит (ссылку) мышкой на панель закладок!</span><br>
+			<span style="font-size:14pt; color:#aaa;">Версия: 2.0.0</span>
+		</figcaption>
+	</figure>
+	<h1 style="margin-top:0px;">Шифрование текста алгоритмом AES</h1>
+	<p>Закладка позволит зашифровать и расшифровать выделенный текст с заменой или в новом окне.
+		<br><i>А так же сжать и распаковать алгоритмом LZW </i>
+		<br>Работает практически в любом браузере и на любой ОС.
+		<br>Используется надёжный алгоритм &mdash; <a href="https://ru.wikipedia.org/wiki/Advanced_Encryption_Standard">AES(Rijndael)</a>, длина ключа 256 bit, режим <a href="https://ru.wikipedia.org/wiki/Режим_шифрования">CBC</a>.
+		<br>Было придумано и написано в большей степени для себя, но хочу поделиться с сообществом.
+		<br>Публикую на условиях забавной лицензии <a href="http://www.wtfpl.net/" rel="license">WTFPL</a> &mdash; берите и&#8230; используйте как вам заблагорассудится.
+		<br><span onmouseover="this.style.color='blue'" onclick="javascript:document.getElementById('nothingmore').style.display='block'" style="cursor:help;">Ничего</span> вашего себе не беру, ни шифровок, ни паролей, ни денег. Всё бесплатно и открыто, убедитесь в этом сами.
+		<span id="nothingmore" style="display:none; border-left:2px solid blue; padding-left:5px; font-size:10pt; font-style:italic; "><br>Если быть точнее, то: предлагаемые скрипты не содержат каких либо хитростей для отправки используемых данных за пределы браузера и сайта на котором они используются. Весь процесс шифрования и расшифровки, в том числе и замены происходит только в вашем браузере. Поместить весь необходимый код в закладку(ссылку) непредставляется возможным из-за объёма. Поэтому, используется личный веб-хостинг для динамической загрузки скриптов. После чего происходит их выполнение на открытой странице в браузере. Чтобы быть честным до конца, хочется заметить, что автор из любопытства, предусмотрел сбор общей (анонимной) статистики использования закладки, посредством сервиса сокращения ссылок "goo.gl". Прошу не пинать! Если параноя не даёт покоя, но голова на месте и не из попы руки, в закладке ссылку можно поменять ;)</span>
+		<br>Благодарности в виде &#579;itcoin можно отправить сюда: <a href="bitcoin:13YaLiCq89HTgD5U2e8QeCFvDFLkyqhBMt">﻿13YaLiCq89HTgD5U2e8QeCFvDFLkyqhBMt</a>
+		<br>Жалобы, вопросы и предложения принимаю на почту: <a href="mailto:aesf@yalic.pw">aesf@yalic.pw</a>.
+	</p>
+	<dl>
+		<dt><strong>Для чего это всё нужно:</strong></dt>
+		<dd>Для быстрой и удобной передачи конфиденциальной информации через небезопасные каналы в Интернет используя браузер, такие как социальные сети, чаты или почта. Например, если нужно отправить реквизиты доступа кому либо к чему либо. Если тема вашей с собеседником переписки не укладывается в общественные нормы, будь то любовные страсти самых неожиданных направлений или даже нечто противозаконное. Главное не забывайте: на сколько бы не был надёжным алгоритм, длинным и сложным пароль, от "терморектального криптоанализа" вас ничего не спасёт!</dd>
+		<dt style="margin-top:1em;"><strong>Коротко о том, <a href="how-to-use.gif" onclick="javascript:document.getElementById('howtouse').style.display='block';return false;">как использовать</a>:</strong></dt>
+		<dd><figure id="howtouse" onclick="javascript:document.getElementById('howtouse').style.display='none'"><img src="how-to-use.gif" alt="How to use" /></figure>
+		<ol style="padding-left:0px; margin-top:auto;">
+			<li>Выделить интересующий текст на странице в браузере, например в поле ввода сообщения</li>
+			<li>Нажать на кнопку с закладкой созданную на панели этих самых закладок</li>
+			<li>Выбрать нужную опперацию:
+				<ul><li>"E" &mdash; зашифровать (по умолчанию) или "D" &mdash; расшифровать.</li>
+				<li>"C" &mdash; сжать или "U" &mdash; распаковать алгоритмом LZW(+Base64)</li>
+				<li>"C16" &mdash; сжать или "U16" &mdash; распаковать алгоритмом LZW(+UTF16)</li>
+				<li>Используй нижний регистр для команд, что бы результат получить в новом окне</li></ul></li>
+			<li>Ввести свой неповторимый пароль (по умолчанию пять звёзд *****)</li>
+			<li>Получить желаемое на месте прежнго или в новом окне.
+				<br><i>Будь внимателнее с тем, что выделяешь и какой пароль набираешь!</i>
+				<br><i>Результат из тегов "iframe" всегда открывается в новом окне. </i></li>
+		</ol></dd>
+		<dt style="margin-top:1em;"><strong>Чем эта закладка лучше чем "Вася Петичкин из соседнего подъезда, написавший на заборе ..."?</strong></dt>
+		<dd>В отличии от тысячи программ и браузерных расширений, каждый из которых требует опредлённой совместимости или с браузером и его версией или с операционной системой; Этой закладке нужен лишь браузер умеющий JavaScript, а это практически любой современный, в том числе и на смартфоне. Закладку не нужно устанавливать или настраивать. Скрипт который выполняет всю необходимую работу будет периодически обновляться и улучшаться на основе личного опыта и ваших отзывов. Всё соответствует стандартам! Никакой отсебятины в алгоритмах, а это значит, что шифровки будут читаться и в других местах.  
+			<details><summary><span>Пример аналогичного использования в GNU/Linux:</span></summary>
+				<pre style="padding-left:10px; border-left:3px solid #777; color:#555; font-size:12pt; white-space: pre-wrap !important;">user@host:~$ echo "Message" | openssl aes-256-cbc -e -a -k "*****"
+U2FsdGVkX1+6slYEshntgybtcqS9FgBWkDstuW38dUw=
+user@host:~$ echo "U2FsdGVkX1+6slYEshntgybtcqS9FgBWkDstuW38dUw=" | openssl aes-256-cbc -d -a -k "*****"
+Message</pre>
+			</details>
+		</dd>
+	</dl>
+
+	<footer></footer>
+
+<!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter33190908 = new Ya.Metrika({ id:33190908, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/33190908" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
+<!-- 
+	Привет! Эта заметка оставлена специально для тебя! ;)
+	Для работы с алгоритмом AES использована общедоступная (под лицензией MIT) JS библиотека: https://github.com/mdp/gibberish-aes/blob/master/src/gibberish-aes.js
+	Для работы с алгоритмом LZW (Lempel-Ziv-Welch) использована общедоступная (под лицензией WTFPL) JS  библиотека: https://github.com/pieroxy/lz-string/tree/master/libs
+	Ключевые файлы скриптов подписаны GPG подписью. Например "index.js.asc"
+	GPG подпись и валидный SSL на сайте используются для защиты файлов от подмены, тем самым обеспечивая некоторые гарантии надёжности.
+	Ссылка "https://yalic.pw/aes/index.js" в закладке на скрипт-интерфейс заменена на "https://goo.gl/JuQ6cj" для анонимной статистики использования.
+/-->
