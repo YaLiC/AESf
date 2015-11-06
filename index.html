@@ -22,28 +22,28 @@
 	<link href="favicon.ico" type="image/x-icon" rel="shortcut icon">
 	<link href="favicon.ico" type="image/x-icon" rel="icon">
 	<style type="text/css">
-		html {padding:20px 30px 20px 30px; background: #fbfbfb url("sativa.png");}
-		body {min-width:350px; padding:15px; border:1px solid #ccc; border-radius:3px; box-shadow:0 0 10px rgba(150,150,150,0.5); background-color:rgba(255,255,255,0.6); color:#333; font-size:13pt; text-align:justify; font-family: "Ubuntu", "trebuchet MS", "sans-serif";}
-		a {color:#111;} a:visited {color:#111;} a:active {color:#111;} a:hover {text-decoration:none;}
-		#howtouse {display:none; margin:auto; position:absolute; top:0; left:0; bottom:0; right:0; width:622px; height:493px; background-color:#fafafa; border:1px solid #aaa; box-shadow: 0 0 15px rgba(0,0,0,0.3);}
+	html {padding:20px 30px 20px 30px; background: #fbfbfb url("sativa.png");}
+	body {min-width:350px; padding:15px; border:1px solid #ccc; border-radius:3px; box-shadow:0 0 10px rgba(150,150,150,0.5); background-color:rgba(255,255,255,0.6); color:#333; font-size:13pt; text-align:justify; font-family: "Ubuntu", "trebuchet MS", "sans-serif";}
+	#howtouse {display:none; margin:auto; position:absolute; top:0; left:0; bottom:0; right:0; width:622px; height:493px; background-color:#fafafa; border:1px solid #aaa; box-shadow: 0 0 15px rgba(0,0,0,0.3);}
+	a {color:#111;} a:visited {color:#111;} a:active {color:#111;} a:hover {text-decoration:none;}
 	</style>
 </head>
 <body>
 	<figure style="float:right; margin:10px 10px 10px 100px; width:256px;">
-		<a href='javascript:(function(){if(typeof window.AESf==="undefined"){var aJS=document.createElement("script");aJS.type="text/javascript";aJS.src="https://goo.gl/JuQ6cj";document.getElementsByTagName("head")[0].appendChild(aJS)}else AESf()})();' title="AESf!">
+		<a rel="sidebar" href='javascript:(function(){if(typeof window.AESf==="undefined"){var aJS=document.createElement("script");aJS.type="text/javascript";aJS.src="https://goo.gl/JuQ6cj";document.getElementsByTagName("head")[0].appendChild(aJS)}else AESf()})();' title="AESf!">
 			<img src="AES-icon.png" style="width:256px; opacity:0.9;" alt="AESf!" /></a>
 		<figcaption style="padding-bottom:5px; border-bottom:3px solid #f33;">
-			<span style="font-size:18pt;">Перетащи этот щит (ссылку) мышкой на панель закладок!</span><br>
-			<span style="font-size:14pt; color:#aaa;">Версия: 2.0.0</span>
+			<span style="font-size:150%;">Перетащи этот щит (ссылку) мышкой на панель закладок!</span><br>
+			<span style="font-size:130%; color:#aaa;">Версия: 2.0.0</span>
 		</figcaption>
 	</figure>
 	<h1 style="margin-top:0px;">Шифрование текста алгоритмом AES</h1>
 	<p>Закладка позволит зашифровать и расшифровать выделенный текст с заменой или в новом окне.
 		<br><i>А так же сжать и распаковать алгоритмом LZW </i>
 		<br>Работает практически в любом браузере и на любой ОС.
-		<br>Используется надёжный алгоритм &mdash; <a href="https://ru.wikipedia.org/wiki/Advanced_Encryption_Standard">AES(Rijndael)</a>, длина ключа 256 bit, режим <a href="https://ru.wikipedia.org/wiki/Режим_шифрования">CBC</a>.
+		<br>Используется надёжный алгоритм &mdash; <a rel="details" href="https://ru.wikipedia.org/wiki/Advanced_Encryption_Standard">AES(Rijndael)</a>, длина ключа 256 bit, режим <a rel="details" href="https://ru.wikipedia.org/wiki/Режим_шифрования">CBC</a>.
 		<br>Было придумано и написано в большей степени для себя, но хочу поделиться с сообществом.
-		<br>Публикую на условиях забавной лицензии <a href="http://www.wtfpl.net/" rel="license">WTFPL</a> &mdash; берите и&#8230; используйте как вам заблагорассудится.
+		<br>Публикую на условиях забавной лицензии <a rel="license" href="http://www.wtfpl.net/">WTFPL</a> &mdash; берите и&#8230; используйте как вам заблагорассудится.
 		<br><span onmouseover="this.style.color='blue'" onclick="javascript:document.getElementById('nothingmore').style.display='block'" style="cursor:help;">Ничего</span> вашего себе не беру, ни шифровок, ни паролей, ни денег. Всё бесплатно и открыто, убедитесь в этом сами.
 		<span id="nothingmore" style="display:none; border-left:2px solid blue; padding-left:5px; font-size:10pt; font-style:italic; "><br>Если быть точнее, то: предлагаемые скрипты не содержат каких либо хитростей для отправки используемых данных за пределы браузера и сайта на котором они используются. Весь процесс шифрования и расшифровки, в том числе и замены происходит только в вашем браузере. Поместить весь необходимый код в закладку(ссылку) непредставляется возможным из-за объёма. Поэтому, используется личный веб-хостинг для динамической загрузки скриптов. После чего происходит их выполнение на открытой странице в браузере. Чтобы быть честным до конца, хочется заметить, что автор из любопытства, предусмотрел сбор общей (анонимной) статистики использования закладки, посредством сервиса сокращения ссылок "goo.gl". Прошу не пинать! Если параноя не даёт покоя, но голова на месте и не из попы руки, в закладке ссылку можно поменять ;)</span>
 		<br>Благодарности в виде &#579;itcoin можно отправить сюда: <a href="bitcoin:13YaLiCq89HTgD5U2e8QeCFvDFLkyqhBMt">﻿13YaLiCq89HTgD5U2e8QeCFvDFLkyqhBMt</a>
@@ -52,7 +52,7 @@
 	<dl>
 		<dt><strong>Для чего это всё нужно:</strong></dt>
 		<dd>Для быстрой и удобной передачи конфиденциальной информации через небезопасные каналы в Интернет используя браузер, такие как социальные сети, чаты или почта. Например, если нужно отправить реквизиты доступа кому либо к чему либо. Если тема вашей с собеседником переписки не укладывается в общественные нормы, будь то любовные страсти самых неожиданных направлений или даже нечто противозаконное. Главное не забывайте: на сколько бы не был надёжным алгоритм, длинным и сложным пароль, от "терморектального криптоанализа" вас ничего не спасёт!</dd>
-		<dt style="margin-top:1em;"><strong>Коротко о том, <a href="how-to-use.gif" onclick="javascript:document.getElementById('howtouse').style.display='block';return false;">как использовать</a>:</strong></dt>
+		<dt style="margin-top:1em;"><strong>Коротко о том, <a rel="details" href="how-to-use.gif" onclick="javascript:document.getElementById('howtouse').style.display='block';return false;">как использовать</a>:</strong></dt>
 		<dd><figure id="howtouse" onclick="javascript:document.getElementById('howtouse').style.display='none'"><img src="how-to-use.gif" alt="How to use" /></figure>
 		<ol style="padding-left:0px; margin-top:auto;">
 			<li>Выделить интересующий текст на странице в браузере, например в поле ввода сообщения</li>
@@ -78,7 +78,9 @@ Message</pre>
 		</dd>
 	</dl>
 
-	<footer style="margin-top:50px; padding-top:10px; border-top:1px solid #ccc; font-size:10pt;">&lt;/&gt;   GitHub: <a href="https://github.com/YaLiC/AESf">YaLiC/AESf</a></footer>
+	<footer style="margin-top:50px; padding-top:10px; border-top:1px solid #ccc; font-size:80%; text-align:center;">
+		<a rel="archives" href="https://github.com/YaLiC/AESf">Код на GitHub</a> &bull; <a rel="me" href="https://t4.yalic.pw">Бложик автора</a>
+	</footer>
 
 <!-- Yandex.Metrika counter --><script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter33190908 = new Ya.Metrika({ id:33190908, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="https://mc.yandex.ru/watch/33190908" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 
